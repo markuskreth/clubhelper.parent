@@ -20,6 +20,8 @@
 		<vaadin.version>14.4.2</vaadin.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<!-- github server corresponds to entry in ~/.m2/settings.xml -->
+		<github.global.server>github</github.global.server>
 	</properties>
 
 	<repositories>
@@ -113,6 +115,11 @@
 				<artifactId>clubhelper.entrypoint</artifactId>
 				<version>${project.version}</version>
 			</dependency>
+			<dependency>
+				<groupId>de.kreth.clubhelper</groupId>
+				<artifactId>clubhelper-entity</artifactId>
+				<version>${project.version}</version>
+			</dependency>
 		</dependencies>
 	</dependencyManagement>
 
@@ -132,10 +139,18 @@
 
 	<modules>
 		<module>../clubhelper-data</module>
+		<module>../clubhelper-entity</module>
 		<module>../clubhelper-vaadin-components</module>
 		<module>../clubhelper_backend_model</module>
 		<module>../clubhelper-attendance</module>
 		<module>../clubhelper-personedit</module>
 		<module>../clubhelper.entrypoint</module>
 	</modules>
+	
+	<scm>
+		<url>scm:git:https://github.com/markuskreth/clubhelper.parent.git</url>
+		<developerConnection>scm:git:https://github.com/markuskreth/clubhelper.parent.git</developerConnection>
+		<connection>scm:git:https://github.com/markuskreth/clubhelper.parent.git</connection>
+	</scm>
+	
 </project>
